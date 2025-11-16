@@ -16,9 +16,9 @@ interface PracticeCardProps {
 }
 
 const complexityLabels = {
-  low: { label: 'Простая', color: 'bg-[#7A9B57]' },
-  medium: { label: 'Средняя', color: 'bg-[#D4A574]' },
-  high: { label: 'Сложная', color: 'bg-[#C17B5A]' }
+  low: { label: 'Простая', color: 'bg-[#059669]' },
+  medium: { label: 'Средняя', color: 'bg-[#C9A961]' },
+  high: { label: 'Сложная', color: 'bg-[#1a1a2e]' }
 }
 
 export function PracticeCard({ title, description, icon: Icon, cases, complexity, slug, winsCount = 0 }: PracticeCardProps) {
@@ -28,32 +28,32 @@ export function PracticeCard({ title, description, icon: Icon, cases, complexity
       transition={{ type: "spring", stiffness: 300 }}
     >
       <Link href={`/praktika/${slug}`}>
-        <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow h-full flex flex-col border border-[#E8D5C4]">
-          <div className="flex items-start justify-between mb-4">
-            <div className="p-3 bg-[#E8D5C4] rounded-lg">
-              <Icon className="h-6 w-6 text-[#2C1810]" />
+        <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-xl transition-all h-full flex flex-col border border-[#e2e8f0] hover:border-[#C9A961]/30">
+          <div className="flex items-start justify-between mb-6">
+            <div className="p-4 bg-[#f8f9fa] rounded-lg border border-[#e2e8f0]">
+              <Icon className="h-7 w-7 text-[#1a1a2e]" />
             </div>
-            <Badge className={complexityLabels[complexity].color}>
+            <Badge className={`${complexityLabels[complexity].color} text-white`}>
               {complexityLabels[complexity].label}
             </Badge>
           </div>
 
-          <h3 className="text-xl font-bold text-[#2C1810] mb-2">{title}</h3>
-          <p className="text-[#5A4A38] mb-4 flex-1">{description}</p>
+          <h3 className="text-2xl font-bold text-[#1a1a2e] mb-3 font-cormorant">{title}</h3>
+          <p className="text-[#64748b] mb-6 flex-1 leading-relaxed">{description}</p>
 
-          <div className="space-y-2 mb-4">
+          <div className="space-y-2.5 mb-6">
             {cases.slice(0, 3).map((caseItem, idx) => (
-              <div key={idx} className="text-sm text-[#5A4A38] flex items-start gap-2">
-                <span className="text-[#D4A574]">•</span>
+              <div key={idx} className="text-sm text-[#475569] flex items-start gap-2.5">
+                <span className="text-[#C9A961] font-bold">•</span>
                 <span>{caseItem}</span>
               </div>
             ))}
           </div>
 
           {winsCount > 0 && (
-            <div className="pt-4 border-t border-[#E8D5C4]">
-              <p className="text-sm text-[#5A4A38]">
-                <span className="font-semibold text-[#D4A574]">{winsCount}+</span> выигранных дел
+            <div className="pt-6 border-t border-[#e2e8f0]">
+              <p className="text-sm text-[#64748b]">
+                <span className="font-semibold text-[#C9A961]">{winsCount}+</span> выигранных дел
               </p>
             </div>
           )}

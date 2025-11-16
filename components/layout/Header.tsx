@@ -9,37 +9,37 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E8D5C4] bg-[#F5F1E8]/95 backdrop-blur supports-[backdrop-filter]:bg-[#F5F1E8]/60">
-      <nav className="container mx-auto flex h-16 items-center justify-between px-4">
+    <header className="sticky top-0 z-50 w-full border-b border-[#e2e8f0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
+      <nav className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Scale className="h-6 w-6 text-[#D4A574]" />
-          <span className="text-xl font-bold text-[#2C1810]">Consul Expert Lawyer</span>
+          <Scale className="h-7 w-7 text-[#C9A961]" />
+          <span className="text-xl font-bold text-[#1a1a2e] font-cormorant">Consul Expert Lawyer</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/praktika" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+          <Link href="/praktika" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
             Практики
           </Link>
-          <Link href="/o-nas" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+          <Link href="/o-nas" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
             О нас
           </Link>
-          <Link href="/otzyvy" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+          <Link href="/otzyvy" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
             Отзывы
           </Link>
-          <Link href="/blog" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+          <Link href="/blog" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
             Блог
           </Link>
-          <Link href="/kontakty" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+          <Link href="/kontakty" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
             Контакты
           </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button asChild variant="outline" className="border-[#D4A574] text-[#2C1810] hover:bg-[#E8D5C4]">
+          <Button asChild variant="outline" className="border-[#1a1a2e] text-[#1a1a2e] hover:bg-[#1a1a2e] hover:text-white transition-all">
             <Link href="/ai-lawyer">AI-юрист</Link>
           </Button>
-          <Button asChild className="bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810] font-semibold">
+          <Button asChild className="bg-[#C9A961] hover:bg-[#B8860B] text-white font-semibold shadow-md">
             <Link href="/kontakty#contact">Консультация</Link>
           </Button>
         </div>
@@ -50,33 +50,33 @@ export function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
           aria-label="Меню"
         >
-          {mobileMenuOpen ? <X className="h-6 w-6 text-[#2C1810]" /> : <Menu className="h-6 w-6 text-[#2C1810]" />}
+          {mobileMenuOpen ? <X className="h-6 w-6 text-[#1a1a2e]" /> : <Menu className="h-6 w-6 text-[#1a1a2e]" />}
         </button>
       </nav>
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#E8D5C4] bg-[#F5F1E8]">
+        <div className="md:hidden border-t border-[#e2e8f0] bg-white">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link href="/praktika" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+            <Link href="/praktika" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
               Практики
             </Link>
-            <Link href="/o-nas" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+            <Link href="/o-nas" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
               О нас
             </Link>
-            <Link href="/otzyvy" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+            <Link href="/otzyvy" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
               Отзывы
             </Link>
-            <Link href="/blog" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+            <Link href="/blog" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
               Блог
             </Link>
-            <Link href="/kontakty" className="text-sm font-medium text-[#5A4A38] hover:text-[#D4A574] transition-colors">
+            <Link href="/kontakty" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
               Контакты
             </Link>
-            <Button asChild variant="outline" className="w-full border-[#D4A574] text-[#2C1810] hover:bg-[#E8D5C4]">
+            <Button asChild variant="outline" className="w-full border-[#1a1a2e] text-[#1a1a2e] hover:bg-[#1a1a2e] hover:text-white">
               <Link href="/ai-lawyer">AI-юрист</Link>
             </Button>
-            <Button asChild className="w-full bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810] font-semibold">
+            <Button asChild className="w-full bg-[#C9A961] hover:bg-[#B8860B] text-white font-semibold">
               <Link href="/kontakty#contact">Консультация</Link>
             </Button>
           </div>

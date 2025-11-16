@@ -1,26 +1,22 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google"
+import { Poppins, Cormorant_Garamond } from "next/font/google"
 import dynamic from "next/dynamic"
 import Script from "next/script"
 import "./globals.css"
 
-const inter = Inter({ 
+const poppins = Poppins({ 
   subsets: ["latin", "cyrillic"],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
 })
 
-const playfair = Playfair_Display({ 
+const cormorant = Cormorant_Garamond({ 
   subsets: ["latin", "cyrillic"],
   display: 'swap',
-  variable: '--font-playfair',
-})
-
-const jetbrainsMono = JetBrains_Mono({ 
-  subsets: ["latin", "cyrillic"],
-  display: 'swap',
-  variable: '--font-mono',
+  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 const Analytics = dynamic(() => import("@vercel/analytics/next").then(mod => mod.Analytics))
@@ -83,7 +79,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#D4A574",
+  themeColor: "#1a1a2e",
 }
 
 export default function RootLayout({
@@ -126,12 +122,12 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="ru" className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable}`}>
+    <html lang="ru" className={`${poppins.variable} ${cormorant.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         <Script
           id="organization-schema"
           type="application/ld+json"
