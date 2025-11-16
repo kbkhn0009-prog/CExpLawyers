@@ -24,10 +24,9 @@ export async function POST(req: NextRequest) {
         }
       ],
       temperature: 0.7,
-      maxTokens: 500,
     })
 
-    return result.toDataStreamResponse()
+    return result.toTextStreamResponse()
   } catch (error) {
     console.error('AI chat error:', error)
     return NextResponse.json(

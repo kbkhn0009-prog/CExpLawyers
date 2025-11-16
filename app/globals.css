@@ -38,7 +38,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
   }
   body {
     @apply bg-[#F5F1E8] text-[#2C1810];
