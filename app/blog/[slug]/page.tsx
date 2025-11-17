@@ -82,26 +82,26 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#8E8E8E] hover:text-[#E31937] mb-8 transition-colors">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#1E3A5F] mb-8 transition-colors">
             <ArrowLeft className="h-4 w-4" />
             Назад к блогу
           </Link>
 
-          <article className="glass rounded-none p-8">
+          <article className="corporate-card corporate-card-hover p-8">
             <div className="mb-6">
-              <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs text-white">
+              <span className="px-3 py-1 bg-[#F3F4F6] border border-[#E5E7EB] text-xs text-[#111827]">
                 {post.category}
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-6">
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-4 text-sm text-[#8E8E8E] mb-8 pb-6 border-b border-white/10">
+            <div className="flex items-center gap-4 text-sm text-[#6B7280] mb-8 pb-6 border-b border-[#E5E7EB]">
               <div className="flex items-center gap-1">
                 <User className="h-4 w-4" />
                 {post.author}
@@ -117,18 +117,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </div>
 
             <div 
-              className="prose prose-lg max-w-none text-[#8E8E8E] prose-headings:text-white prose-strong:text-white prose-a:text-[#E31937]"
+              className="prose prose-lg max-w-none text-[#6B7280] prose-headings:text-[#111827] prose-strong:text-[#111827] prose-a:text-[#1E3A5F]"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <p className="text-sm text-[#8E8E8E] mb-4">
-                <strong className="text-white">Важно:</strong> Данная статья носит информационный характер и не является юридической консультацией. 
+            <div className="mt-12 pt-8 border-t border-[#E5E7EB]">
+              <p className="text-sm text-[#6B7280] mb-4">
+                <strong className="text-[#111827]">Важно:</strong> Данная статья носит информационный характер и не является юридической консультацией. 
                 Для решения вашей конкретной ситуации необходима индивидуальная консультация с юристом.
               </p>
               <Link 
                 href="/kontakty#contact"
-                className="inline-block px-6 py-3 bg-[#E31937] hover:bg-[#C0172F] text-white font-semibold rounded-none transition-all shadow-2xl hover:shadow-[0_0_40px_rgba(227,25,55,0.5)]"
+                className="inline-block px-6 py-3 bg-[#1E3A5F] hover:bg-[#152A4A] text-white font-semibold transition-all shadow-lg hover:shadow-xl"
               >
                 Записаться на консультацию
               </Link>

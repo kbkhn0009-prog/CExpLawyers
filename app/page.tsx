@@ -5,6 +5,7 @@ import { PracticesGrid } from "@/components/sections/PracticesGrid"
 import { AboutLawyers } from "@/components/sections/AboutLawyers"
 import { TrustBar } from "@/components/sections/TrustBar"
 import { FAQSchema } from "@/components/sections/FAQSchema"
+import { TelegramBotSection } from "@/components/sections/TelegramBotSection"
 import { AILawyerWidget } from "@/components/ui/AILawyerWidget"
 import dynamic from "next/dynamic"
 
@@ -20,6 +21,7 @@ export default function Home() {
         <PracticesGrid />
         <AboutLawyers />
         <SocialProof />
+        <TelegramBotSection />
         <FAQSchema />
       </main>
       <Footer />

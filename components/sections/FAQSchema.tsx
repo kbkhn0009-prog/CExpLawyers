@@ -48,19 +48,19 @@ export function FAQSchema() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <section id="faq" className="py-20 bg-[#0A0A0A] border-y border-[#393C41]/20">
+      <section id="faq" className="py-20 bg-white border-y border-[#E5E7EB]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#111827] mb-8 text-center">
               Часто задаваемые вопросы
             </h2>
             <Accordion type="single" collapsible className="w-full">
               {faqData.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-b border-white/10">
-                  <AccordionTrigger className="text-left text-white hover:text-[#E31937]">
+                <AccordionItem key={index} value={`item-${index}`} className="border-b border-[#E5E7EB]">
+                  <AccordionTrigger className="text-left text-[#111827] hover:text-[#1E3A5F]">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#8E8E8E] pt-2">
+                  <AccordionContent className="text-[#6B7280] pt-2">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

@@ -35,13 +35,13 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-4 text-center">
             Блог
           </h1>
-          <p className="text-lg text-[#8E8E8E] mb-12 text-center">
+          <p className="text-lg text-[#6B7280] mb-12 text-center">
             Полезные статьи по юридическим вопросам от наших экспертов
           </p>
 
@@ -50,18 +50,18 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="block glass rounded-none p-6 hover:border-[#E31937]/30 red-glow-hover transition-all"
+                className="block corporate-card corporate-card-hover p-6 transition-all"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs text-white">
+                  <span className="px-3 py-1 bg-[#F3F4F6] border border-[#E5E7EB] text-xs text-[#111827]">
                     {post.category}
                   </span>
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-3 hover:text-[#E31937] transition-colors">
+                <h2 className="text-2xl font-bold text-[#111827] mb-3 hover:text-[#1E3A5F] transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-[#8E8E8E] mb-4">{post.excerpt}</p>
-                <div className="flex items-center gap-4 text-sm text-[#8E8E8E]">
+                <p className="text-[#6B7280] mb-4">{post.excerpt}</p>
+                <div className="flex items-center gap-4 text-sm text-[#6B7280]">
                   <div className="flex items-center gap-1">
                     <User className="h-4 w-4" />
                     {post.author}

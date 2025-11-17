@@ -5,17 +5,17 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-8">
             Политика конфиденциальности
           </h1>
 
-          <div className="glass rounded-none p-8 space-y-6">
+          <div className="corporate-card corporate-card-hover p-8 space-y-6">
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">1. Общие положения</h2>
-              <p className="text-[#8E8E8E] leading-relaxed">
+              <h2 className="text-2xl font-bold text-[#111827] mb-4">1. Общие положения</h2>
+              <p className="text-[#6B7280] leading-relaxed">
                 Настоящая Политика конфиденциальности определяет порядок обработки и защиты 
                 персональных данных пользователей сайта Consul Expert Lawyer в соответствии 
                 с Федеральным законом от 27.07.2006 № 152-ФЗ "О персональных данных".
@@ -23,11 +23,11 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">2. Сбор персональных данных</h2>
-              <p className="text-[#8E8E8E] leading-relaxed mb-3">
+              <h2 className="text-2xl font-bold text-[#111827] mb-4">2. Сбор персональных данных</h2>
+              <p className="text-[#6B7280] leading-relaxed mb-3">
                 Мы собираем следующие персональные данные:
               </p>
-              <ul className="list-disc list-inside text-[#8E8E8E] space-y-2 ml-4">
+              <ul className="list-disc list-inside text-[#6B7280] space-y-2 ml-4">
                 <li>Имя и контактная информация (телефон, email)</li>
                 <li>Информация, предоставленная при заполнении форм на сайте</li>
                 <li>Данные о взаимодействии с AI-консультантом</li>
@@ -36,11 +36,11 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">3. Цели обработки данных</h2>
-              <p className="text-[#8E8E8E] leading-relaxed">
+              <h2 className="text-2xl font-bold text-[#111827] mb-4">3. Цели обработки данных</h2>
+              <p className="text-[#6B7280] leading-relaxed">
                 Персональные данные обрабатываются для следующих целей:
               </p>
-              <ul className="list-disc list-inside text-[#8E8E8E] space-y-2 ml-4 mt-3">
+              <ul className="list-disc list-inside text-[#6B7280] space-y-2 ml-4 mt-3">
                 <li>Предоставление юридических консультаций и услуг</li>
                 <li>Обработка заявок и обращений</li>
                 <li>Улучшение качества сервиса</li>
@@ -49,8 +49,8 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">4. Защита данных</h2>
-              <p className="text-[#8E8E8E] leading-relaxed">
+              <h2 className="text-2xl font-bold text-[#111827] mb-4">4. Защита данных</h2>
+              <p className="text-[#6B7280] leading-relaxed">
                 Мы применяем современные технические и организационные меры для защиты 
                 персональных данных от несанкционированного доступа, изменения, раскрытия 
                 или уничтожения.
@@ -58,11 +58,11 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">5. Права пользователей</h2>
-              <p className="text-[#8E8E8E] leading-relaxed mb-3">
+              <h2 className="text-2xl font-bold text-[#111827] mb-4">5. Права пользователей</h2>
+              <p className="text-[#6B7280] leading-relaxed mb-3">
                 Вы имеете право:
               </p>
-              <ul className="list-disc list-inside text-[#8E8E8E] space-y-2 ml-4">
+              <ul className="list-disc list-inside text-[#6B7280] space-y-2 ml-4">
                 <li>Получать информацию о своих персональных данных</li>
                 <li>Требовать исправления неточных данных</li>
                 <li>Требовать удаления персональных данных</li>
@@ -71,18 +71,18 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">6. Контакты</h2>
-              <p className="text-[#8E8E8E] leading-relaxed">
+              <h2 className="text-2xl font-bold text-[#111827] mb-4">6. Контакты</h2>
+              <p className="text-[#6B7280] leading-relaxed">
                 По вопросам обработки персональных данных обращайтесь:
               </p>
-              <p className="text-[#8E8E8E] mt-3">
+              <p className="text-[#6B7280] mt-3">
                 Email: info@consulexpert.ru<br />
                 Телефон: +7 (XXX) XXX-XX-XX
               </p>
             </section>
 
             <section>
-              <p className="text-sm text-[#8E8E8E] mt-8">
+              <p className="text-sm text-[#6B7280] mt-8">
                 Дата последнего обновления: {new Date().toLocaleDateString('ru-RU')}
               </p>
             </section>

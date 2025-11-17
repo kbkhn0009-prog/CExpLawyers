@@ -26,7 +26,7 @@ export function TrustBar() {
   }, [])
 
   return (
-    <section className="py-16 bg-[#0A0A0A] border-y border-[#393C41]/20">
+    <section className="py-16 bg-[#F9FAFB] border-y border-[#E5E7EB]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           {stats.map((stat, index) => {
@@ -39,14 +39,14 @@ export function TrustBar() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex p-4 bg-white/5 border border-white/10 mb-4">
-                  <Icon className="h-7 w-7 text-[#E31937]" />
+                <div className="inline-flex p-3 bg-white border border-[#E5E7EB] mb-4">
+                  <Icon className="h-6 w-6 text-[#1E3A5F]" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#111827] mb-2">
                   {stat.value}
-                  <span className="text-[#E31937]">{stat.suffix}</span>
+                  <span className="text-[#1E3A5F]">{stat.suffix}</span>
                 </div>
-                <div className="text-sm text-[#8E8E8E] font-medium">{stat.label}</div>
+                <div className="text-sm text-[#6B7280] font-medium">{stat.label}</div>
               </motion.div>
             )
           })}

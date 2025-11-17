@@ -3,37 +3,44 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Tesla Color Palette */
-  --color-black: #0A0A0A;
+  /* Corporate Legal Color Palette */
+  --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-red: #E31937;
-  --color-metal: #393C41;
-  --color-glass: rgba(255,255,255,0.08);
-  --color-text: #E5E5E5;
-  --color-text-muted: #8E8E8E;
+  --color-dark-blue: #1E3A5F;
+  --color-navy: #0F172A;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
   
-  --background: #0A0A0A;
-  --foreground: #E5E5E5;
-  --card: rgba(255,255,255,0.08);
-  --card-foreground: #E5E5E5;
-  --popover: #0A0A0A;
-  --popover-foreground: #E5E5E5;
-  --primary: #E31937;
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #1E3A5F;
   --primary-foreground: #FFFFFF;
-  --secondary: rgba(255,255,255,0.08);
-  --secondary-foreground: #E5E5E5;
-  --muted: rgba(255,255,255,0.05);
-  --muted-foreground: #8E8E8E;
-  --accent: #E31937;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #111827;
+  --muted: #F9FAFB;
+  --muted-foreground: #6B7280;
+  --accent: #1E3A5F;
   --accent-foreground: #FFFFFF;
-  --destructive: #E31937;
+  --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(255,255,255,0.1);
-  --input: rgba(255,255,255,0.08);
-  --ring: #E31937;
-  --radius: 0;
+  --border: #E5E7EB;
+  --input: #F3F4F6;
+  --ring: #1E3A5F;
+  --radius: 0.25rem;
   --success: #059669;
-  --alert: #E31937;
+  --alert: #DC2626;
 }
 
 @layer base {
@@ -41,51 +48,30 @@
     border-color: var(--border);
   }
   body {
-    @apply bg-[#0A0A0A] text-[#E5E5E5];
+    @apply bg-white text-[#111827];
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
+    letter-spacing: -0.025em;
+    color: #111827;
   }
 }
 
 @layer utilities {
-  .glass {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  .corporate-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   }
   
-  @supports (backdrop-filter: blur(16px)) {
-    .glass {
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-  }
-  
-  .glass-hover:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(227, 25, 55, 0.3);
-    box-shadow: 0 25px 50px -12px rgba(227, 25, 55, 0.25);
-  }
-  
-  .metal-texture {
-    background-image: 
-      url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-  }
-  
-  .red-glow {
-    box-shadow: 0 0 20px rgba(227, 25, 55, 0.5);
-  }
-  
-  .red-glow-hover:hover {
-    box-shadow: 0 0 30px rgba(227, 25, 55, 0.7);
+  .corporate-card-hover:hover {
+    border-color: #1E3A5F;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
   }
 }
 

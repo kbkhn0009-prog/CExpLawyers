@@ -24,9 +24,9 @@ const Analytics = dynamic(() => import("@vercel/analytics/next").then(mod => mod
 const SpeedInsights = dynamic(() => import("@vercel/speed-insights/next").then(mod => mod.SpeedInsights))
 
 export const metadata: Metadata = {
-  title: "Consul Expert Lawyer | Юридическая точность. Без эмоций — с результатом",
+  title: "Consul Expert Lawyer | Право без компромиссов",
   description:
-    "Диджитал-юридическое агентство с AI-консультантом. Кирилл Барбухин и Женя Малышева — команда юристов с 15+ лет опыта в сложных делах. Технологичность и прогнозируемость результатов.",
+    "Юридическое агентство для бизнеса и частных лиц. Обеспечиваем юридическую защиту. Анализируем риски. Консультируем. Защищаем. Кирилл Барбухин и Женя Малышева — команда юристов с 15+ лет опыта.",
   keywords: "юрист, юридические услуги, адвокат, консультация юриста, гражданское право, семейное право, наследственное право, AI юрист, юридический консультант",
   authors: [{ name: "Кирилл Барбухин, Женя Малышева" }],
   creator: "Consul Expert Lawyer",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Consul Expert Lawyer | Юридическая точность. Без эмоций — с результатом",
-    description: "Диджитал-юристы Кирилл Барбухин и Женя Малышева. 15+ лет опыта. AI-консультант 24/7.",
+    title: "Consul Expert Lawyer | Право без компромиссов",
+    description: "Юридическое агентство для бизнеса и частных лиц. Обеспечиваем юридическую защиту. Анализируем риски. Консультируем. Защищаем.",
     url: "https://www.consulexpert.ru",
     siteName: "Consul Expert Lawyer",
     locale: "ru_RU",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0A0A0A",
+  themeColor: "#1E3A5F",
 }
 
 export default function RootLayout({
@@ -123,7 +123,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="ru" data-theme="tesla" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="ru" data-theme="corporate" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
