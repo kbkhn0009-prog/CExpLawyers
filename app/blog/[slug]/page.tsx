@@ -82,26 +82,26 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F1E8]">
+    <div className="min-h-screen bg-[#0A0A0A]">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#5A4A38] hover:text-[#D4A574] mb-8">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-[#8E8E8E] hover:text-[#E31937] mb-8 transition-colors">
             <ArrowLeft className="h-4 w-4" />
             Назад к блогу
           </Link>
 
-          <article className="bg-white rounded-lg p-8 shadow-md border border-[#E8D5C4]">
+          <article className="glass rounded-none p-8">
             <div className="mb-6">
-              <span className="px-3 py-1 bg-[#E8D5C4] rounded-full text-xs text-[#2C1810]">
+              <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs text-white">
                 {post.category}
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-[#2C1810] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-4 text-sm text-[#5A4A38] mb-8 pb-6 border-b border-[#E8D5C4]">
+            <div className="flex items-center gap-4 text-sm text-[#8E8E8E] mb-8 pb-6 border-b border-white/10">
               <div className="flex items-center gap-1">
                 <User className="h-4 w-4" />
                 {post.author}
@@ -117,18 +117,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </div>
 
             <div 
-              className="prose prose-lg max-w-none text-[#5A4A38]"
+              className="prose prose-lg max-w-none text-[#8E8E8E] prose-headings:text-white prose-strong:text-white prose-a:text-[#E31937]"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
-            <div className="mt-12 pt-8 border-t border-[#E8D5C4]">
-              <p className="text-sm text-[#5A4A38] mb-4">
-                <strong>Важно:</strong> Данная статья носит информационный характер и не является юридической консультацией. 
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-sm text-[#8E8E8E] mb-4">
+                <strong className="text-white">Важно:</strong> Данная статья носит информационный характер и не является юридической консультацией. 
                 Для решения вашей конкретной ситуации необходима индивидуальная консультация с юристом.
               </p>
               <Link 
                 href="/kontakty#contact"
-                className="inline-block px-6 py-3 bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810] font-semibold rounded-lg transition-colors"
+                className="inline-block px-6 py-3 bg-[#E31937] hover:bg-[#C0172F] text-white font-semibold rounded-none transition-all shadow-2xl hover:shadow-[0_0_40px_rgba(227,25,55,0.5)]"
               >
                 Записаться на консультацию
               </Link>

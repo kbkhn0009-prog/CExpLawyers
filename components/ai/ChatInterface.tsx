@@ -71,16 +71,16 @@ export function ChatInterface() {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-xl border border-[#E8D5C4] h-[600px] flex flex-col">
+    <div className="glass rounded-none shadow-2xl border border-white/10 h-[600px] flex flex-col">
       {/* Заголовок */}
-      <div className="p-4 border-b border-[#E8D5C4]">
+      <div className="p-4 border-b border-[#E31937]/20">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-[#D4A574] flex items-center justify-center">
-            <MessageCircle className="h-5 w-5 text-[#2C1810]" />
+          <div className="w-10 h-10 border border-[#E31937]/30 bg-[#E31937]/10 flex items-center justify-center">
+            <MessageCircle className="h-5 w-5 text-[#E31937]" />
           </div>
           <div>
-            <h2 className="font-semibold text-[#2C1810]">AI-юрист Ольга</h2>
-            <p className="text-xs text-[#5A4A38]">Онлайн 24/7</p>
+            <h2 className="font-semibold text-white">AI-юрист Ольга</h2>
+            <p className="text-xs text-[#8E8E8E]">Онлайн 24/7</p>
           </div>
         </div>
       </div>
@@ -93,10 +93,10 @@ export function ChatInterface() {
             className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-[80%] rounded-lg p-3 ${
+              className={`max-w-[80%] rounded-none p-3 ${
                 msg.role === 'user'
-                  ? 'bg-[#D4A574] text-[#2C1810]'
-                  : 'bg-[#E8D5C4] text-[#2C1810]'
+                  ? 'bg-[#E31937] text-white'
+                  : 'bg-white/5 border border-white/10 text-[#E5E5E5]'
               }`}
             >
               {msg.content}
@@ -105,11 +105,11 @@ export function ChatInterface() {
         ))}
         {isLoading && (
           <div className="flex justify-start">
-            <div className="bg-[#E8D5C4] rounded-lg p-3">
+            <div className="bg-white/5 border border-white/10 rounded-none p-3">
               <div className="flex gap-1">
-                <div className="w-2 h-2 bg-[#5A4A38] rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <div className="w-2 h-2 bg-[#5A4A38] rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <div className="w-2 h-2 bg-[#5A4A38] rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                <div className="w-2 h-2 bg-[#E31937] animate-bounce" style={{ animationDelay: '0ms' }} />
+                <div className="w-2 h-2 bg-[#E31937] animate-bounce" style={{ animationDelay: '150ms' }} />
+                <div className="w-2 h-2 bg-[#E31937] animate-bounce" style={{ animationDelay: '300ms' }} />
               </div>
             </div>
           </div>
@@ -119,13 +119,13 @@ export function ChatInterface() {
       {/* Примеры вопросов */}
       {messages.length === 1 && (
         <div className="px-4 pb-2">
-          <p className="text-xs text-[#5A4A38] mb-2">Примеры вопросов:</p>
+          <p className="text-xs text-[#8E8E8E] mb-2">Примеры вопросов:</p>
           <div className="flex flex-wrap gap-2">
             {exampleQuestions.map((q, idx) => (
               <button
                 key={idx}
                 onClick={() => handleExampleClick(q)}
-                className="text-xs px-3 py-1 bg-[#E8D5C4] hover:bg-[#D4A574] rounded-full text-[#2C1810] transition-colors"
+                className="text-xs px-3 py-1 bg-white/5 border border-white/10 hover:border-[#E31937]/30 text-white hover:text-[#E31937] transition-colors rounded-none"
               >
                 {q}
               </button>
@@ -135,18 +135,18 @@ export function ChatInterface() {
       )}
 
       {/* Ввод */}
-      <div className="p-4 border-t border-[#E8D5C4] flex gap-2">
+      <div className="p-4 border-t border-[#E31937]/20 flex gap-2">
         <Input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSend()}
           placeholder="Задайте вопрос..."
-          className="flex-1 bg-white border-[#E8D5C4]"
+          className="flex-1 bg-white/5 border-white/10 text-white placeholder:text-[#8E8E8E] rounded-none"
         />
         <Button
           onClick={handleSend}
           disabled={isLoading || !input.trim()}
-          className="bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810]"
+          className="bg-[#E31937] hover:bg-[#C0172F] text-white rounded-none"
         >
           <Send className="h-4 w-4" />
         </Button>

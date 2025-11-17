@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export function PracticesGrid() {
   return (
-    <section id="practices" className="py-24 bg-white">
+    <section id="practices" className="py-24 bg-[#0A0A0A] border-y border-[#393C41]/20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,10 +15,10 @@ export function PracticesGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-[#1a1a2e] mb-6 font-cormorant">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Наши практики
           </h2>
-          <p className="text-lg text-[#64748b] max-w-2xl mx-auto font-light">
+          <p className="text-lg text-[#8E8E8E] max-w-2xl mx-auto font-light">
             Комплексная юридическая защита по всем направлениям права
           </p>
         </motion.div>

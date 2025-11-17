@@ -9,37 +9,37 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#e2e8f0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
-      <nav className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Scale className="h-7 w-7 text-[#C9A961]" />
-          <span className="text-xl font-bold text-[#1a1a2e] font-cormorant">Consul Expert Lawyer</span>
+    <header className="sticky top-0 z-50 w-full border-b border-[#393C41]/20 bg-[#0A0A0A]/95 backdrop-blur-lg supports-[backdrop-filter]:bg-[#0A0A0A]/90">
+      <nav className="container mx-auto flex h-16 items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-2 group">
+          <Scale className="h-6 w-6 text-white group-hover:text-[#E31937] transition-colors" />
+          <span className="text-lg font-bold text-white group-hover:text-[#E31937] transition-colors">Consul Expert Lawyer</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/praktika" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+          <Link href="/praktika" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
             Практики
           </Link>
-          <Link href="/o-nas" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+          <Link href="/o-nas" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
             О нас
           </Link>
-          <Link href="/otzyvy" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+          <Link href="/otzyvy" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
             Отзывы
           </Link>
-          <Link href="/blog" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+          <Link href="/blog" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
             Блог
           </Link>
-          <Link href="/kontakty" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+          <Link href="/kontakty" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
             Контакты
           </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button asChild variant="outline" className="border-[#1a1a2e] text-[#1a1a2e] hover:bg-[#1a1a2e] hover:text-white transition-all">
+          <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/5 hover:border-white/30 transition-all rounded-none">
             <Link href="/ai-lawyer">AI-юрист</Link>
           </Button>
-          <Button asChild className="bg-[#C9A961] hover:bg-[#B8860B] text-white font-semibold shadow-md">
+          <Button asChild className="bg-[#E31937] hover:bg-[#C0172F] text-white font-semibold transition-all rounded-none">
             <Link href="/kontakty#contact">Консультация</Link>
           </Button>
         </div>
@@ -50,33 +50,33 @@ export function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
           aria-label="Меню"
         >
-          {mobileMenuOpen ? <X className="h-6 w-6 text-[#1a1a2e]" /> : <Menu className="h-6 w-6 text-[#1a1a2e]" />}
+          {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
         </button>
       </nav>
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#e2e8f0] bg-white">
+        <div className="md:hidden border-t border-[#393C41]/20 bg-[#0A0A0A]">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link href="/praktika" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+            <Link href="/praktika" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
               Практики
             </Link>
-            <Link href="/o-nas" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+            <Link href="/o-nas" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
               О нас
             </Link>
-            <Link href="/otzyvy" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+            <Link href="/otzyvy" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
               Отзывы
             </Link>
-            <Link href="/blog" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+            <Link href="/blog" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
               Блог
             </Link>
-            <Link href="/kontakty" className="text-sm font-medium text-[#475569] hover:text-[#C9A961] transition-colors">
+            <Link href="/kontakty" className="text-sm font-medium text-[#8E8E8E] hover:text-[#E31937] transition-colors">
               Контакты
             </Link>
-            <Button asChild variant="outline" className="w-full border-[#1a1a2e] text-[#1a1a2e] hover:bg-[#1a1a2e] hover:text-white">
+            <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-white/5 rounded-none">
               <Link href="/ai-lawyer">AI-юрист</Link>
             </Button>
-            <Button asChild className="w-full bg-[#C9A961] hover:bg-[#B8860B] text-white font-semibold">
+            <Button asChild className="w-full bg-[#E31937] hover:bg-[#C0172F] text-white font-semibold rounded-none">
               <Link href="/kontakty#contact">Консультация</Link>
             </Button>
           </div>

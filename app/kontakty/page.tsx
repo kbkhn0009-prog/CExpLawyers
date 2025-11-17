@@ -23,63 +23,63 @@ export default function ContactsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F1E8]">
+    <div className="min-h-screen bg-[#0A0A0A]">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#2C1810] mb-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
             Контакты
           </h1>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Контактная информация */}
             <div className="space-y-6">
-              <div className="bg-white rounded-lg p-6 shadow-md border border-[#E8D5C4]">
+              <div className="glass rounded-none p-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#D4A574]/20 rounded-lg">
-                    <MapPin className="h-6 w-6 text-[#D4A574]" />
+                  <div className="p-3 bg-white/5 border border-white/10">
+                    <MapPin className="h-6 w-6 text-[#E31937]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2C1810] mb-1">Адрес</h3>
-                    <p className="text-[#5A4A38]">м. Тверская, ул. Большая Дмитровка, Москва</p>
+                    <h3 className="font-semibold text-white mb-1">Адрес</h3>
+                    <p className="text-[#8E8E8E]">м. Тверская, ул. Большая Дмитровка, Москва</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-md border border-[#E8D5C4]">
+              <div className="glass rounded-none p-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#D4A574]/20 rounded-lg">
-                    <Phone className="h-6 w-6 text-[#D4A574]" />
+                  <div className="p-3 bg-white/5 border border-white/10">
+                    <Phone className="h-6 w-6 text-[#E31937]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2C1810] mb-1">Телефон</h3>
-                    <a href="tel:+7XXXXXXXXXX" className="text-[#5A4A38] hover:text-[#D4A574]">
+                    <h3 className="font-semibold text-white mb-1">Телефон</h3>
+                    <a href="tel:+7XXXXXXXXXX" className="text-[#8E8E8E] hover:text-[#E31937] transition-colors">
                       +7 (XXX) XXX-XX-XX
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-md border border-[#E8D5C4]">
+              <div className="glass rounded-none p-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#D4A574]/20 rounded-lg">
-                    <Mail className="h-6 w-6 text-[#D4A574]" />
+                  <div className="p-3 bg-white/5 border border-white/10">
+                    <Mail className="h-6 w-6 text-[#E31937]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2C1810] mb-1">Email</h3>
-                    <a href="mailto:info@consulexpert.ru" className="text-[#5A4A38] hover:text-[#D4A574]">
+                    <h3 className="font-semibold text-white mb-1">Email</h3>
+                    <a href="mailto:info@consulexpert.ru" className="text-[#8E8E8E] hover:text-[#E31937] transition-colors">
                       info@consulexpert.ru
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-md border border-[#E8D5C4]">
-                <h3 className="font-semibold text-[#2C1810] mb-3">Мессенджеры</h3>
+              <div className="glass rounded-none p-6">
+                <h3 className="font-semibold text-white mb-3">Мессенджеры</h3>
                 <div className="flex gap-4">
-                  <a href="https://t.me/consul_lawyer" className="text-[#5A4A38] hover:text-[#D4A574]">
+                  <a href="https://t.me/consul_lawyer" className="text-[#8E8E8E] hover:text-[#E31937] transition-colors">
                     Telegram
                   </a>
-                  <a href="https://wa.me/7XXXXXXXXXX" className="text-[#5A4A38] hover:text-[#D4A574]">
+                  <a href="https://wa.me/7XXXXXXXXXX" className="text-[#8E8E8E] hover:text-[#E31937] transition-colors">
                     WhatsApp
                   </a>
                 </div>
@@ -87,17 +87,17 @@ export default function ContactsPage() {
             </div>
 
             {/* Карта */}
-            <div className="bg-white rounded-lg p-6 shadow-md border border-[#E8D5C4]">
-              <h3 className="font-semibold text-[#2C1810] mb-4">Как нас найти</h3>
-              <div className="aspect-video bg-[#E8D5C4] rounded-lg flex items-center justify-center">
-                <p className="text-[#5A4A38]">Карта Яндекс.Карт будет здесь</p>
+            <div className="glass rounded-none p-6">
+              <h3 className="font-semibold text-white mb-4">Как нас найти</h3>
+              <div className="aspect-video bg-white/5 border border-white/10 flex items-center justify-center">
+                <p className="text-[#8E8E8E]">Карта Яндекс.Карт будет здесь</p>
               </div>
             </div>
           </div>
 
           {/* Форма обратной связи */}
-          <div id="contact" className="bg-white rounded-lg p-8 shadow-md border border-[#E8D5C4]">
-            <h2 className="text-2xl font-bold text-[#2C1810] mb-6">Оставить заявку</h2>
+          <div id="contact" className="glass rounded-none p-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Оставить заявку</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
                 <Input
@@ -105,7 +105,7 @@ export default function ContactsPage() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="bg-white border-[#E8D5C4]"
+                  className="bg-white/5 border-white/10 text-white placeholder:text-[#8E8E8E] rounded-none"
                 />
                 <Input
                   type="tel"
@@ -113,7 +113,7 @@ export default function ContactsPage() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   required
-                  className="bg-white border-[#E8D5C4]"
+                  className="bg-white/5 border-white/10 text-white placeholder:text-[#8E8E8E] rounded-none"
                 />
               </div>
               <Input
@@ -122,16 +122,16 @@ export default function ContactsPage() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
-                className="bg-white border-[#E8D5C4]"
+                className="bg-white/5 border-white/10 text-white placeholder:text-[#8E8E8E] rounded-none"
               />
               <Select value={formData.urgency} onValueChange={(value) => setFormData({ ...formData, urgency: value })}>
-                <SelectTrigger className="bg-white border-[#E8D5C4]">
+                <SelectTrigger className="bg-white/5 border-white/10 text-white rounded-none">
                   <SelectValue placeholder="Срочность" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="low">Не срочно</SelectItem>
-                  <SelectItem value="medium">Средняя срочность</SelectItem>
-                  <SelectItem value="high">Срочно</SelectItem>
+                <SelectContent className="bg-[#0A0A0A] border-white/10">
+                  <SelectItem value="low" className="text-white hover:bg-white/5">Не срочно</SelectItem>
+                  <SelectItem value="medium" className="text-white hover:bg-white/5">Средняя срочность</SelectItem>
+                  <SelectItem value="high" className="text-white hover:bg-white/5">Срочно</SelectItem>
                 </SelectContent>
               </Select>
               <Textarea
@@ -140,12 +140,12 @@ export default function ContactsPage() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows={5}
-                className="bg-white border-[#E8D5C4]"
+                className="bg-white/5 border-white/10 text-white placeholder:text-[#8E8E8E] rounded-none"
               />
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810] font-semibold"
+                className="w-full bg-[#E31937] hover:bg-[#C0172F] text-white font-semibold rounded-none shadow-2xl hover:shadow-[0_0_40px_rgba(227,25,55,0.5)]"
               >
                 Отправить заявку
                 <Send className="ml-2 h-4 w-4" />

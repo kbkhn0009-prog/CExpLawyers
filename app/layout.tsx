@@ -1,31 +1,32 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Poppins, Cormorant_Garamond } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import dynamic from "next/dynamic"
 import Script from "next/script"
 import "./globals.css"
 
-const poppins = Poppins({ 
+const inter = Inter({ 
   subsets: ["latin", "cyrillic"],
   display: 'swap',
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  weight: ['400', '500', '700'],
+  preload: true,
 })
 
-const cormorant = Cormorant_Garamond({ 
+const jetbrainsMono = JetBrains_Mono({ 
   subsets: ["latin", "cyrillic"],
   display: 'swap',
-  variable: '--font-cormorant',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-mono',
+  weight: ['400', '500'],
 })
 
 const Analytics = dynamic(() => import("@vercel/analytics/next").then(mod => mod.Analytics))
 const SpeedInsights = dynamic(() => import("@vercel/speed-insights/next").then(mod => mod.SpeedInsights))
 
 export const metadata: Metadata = {
-  title: "Consul Expert Lawyer | Юридическая защита с душой и интеллектом",
+  title: "Consul Expert Lawyer | Юридическая точность. Без эмоций — с результатом",
   description:
-    "Диджитал-юридическое агентство с AI-консультантом. Кирилл Барбухин и Женя Малышева — команда юристов с 15+ лет опыта в сложных делах. Решаем задачи, которые другие боятся брать.",
+    "Диджитал-юридическое агентство с AI-консультантом. Кирилл Барбухин и Женя Малышева — команда юристов с 15+ лет опыта в сложных делах. Технологичность и прогнозируемость результатов.",
   keywords: "юрист, юридические услуги, адвокат, консультация юриста, гражданское право, семейное право, наследственное право, AI юрист, юридический консультант",
   authors: [{ name: "Кирилл Барбухин, Женя Малышева" }],
   creator: "Consul Expert Lawyer",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Consul Expert Lawyer | Юридическая защита с душой и интеллектом",
+    title: "Consul Expert Lawyer | Юридическая точность. Без эмоций — с результатом",
     description: "Диджитал-юристы Кирилл Барбухин и Женя Малышева. 15+ лет опыта. AI-консультант 24/7.",
     url: "https://www.consulexpert.ru",
     siteName: "Consul Expert Lawyer",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1a1a2e",
+  themeColor: "#0A0A0A",
 }
 
 export default function RootLayout({
@@ -122,12 +123,12 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="ru" className={`${poppins.variable} ${cormorant.variable}`}>
+    <html lang="ru" data-theme="tesla" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <Script
           id="organization-schema"
           type="application/ld+json"

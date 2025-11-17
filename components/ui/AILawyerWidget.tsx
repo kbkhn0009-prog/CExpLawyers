@@ -67,14 +67,16 @@ export function AILawyerWidget() {
       {/* Плавающая кнопка */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810] rounded-full p-4 shadow-lg flex items-center gap-2"
+        className="fixed bottom-6 right-6 z-50 bg-[#0A0A0A] border border-[#E31937]/30 text-white rounded-none p-4 shadow-2xl flex items-center gap-2 group relative overflow-hidden"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Открыть чат с AI-юристом"
       >
-        <MessageCircle className="h-6 w-6" />
+        {/* Red Ring Animation */}
+        <div className="absolute inset-0 border-2 border-[#E31937] animate-ping opacity-20" />
+        <MessageCircle className="h-6 w-6 group-hover:rotate-12 transition-transform" />
         <span className="hidden sm:inline font-semibold">AI-юрист Ольга</span>
-        <span className="absolute -top-2 -right-2 bg-[#7A9B57] text-white text-xs px-2 py-1 rounded-full">
+        <span className="absolute -top-2 -right-2 bg-[#E31937] text-white text-xs px-2 py-1 rounded-none font-bold">
           24/7
         </span>
       </motion.button>
@@ -86,7 +88,7 @@ export function AILawyerWidget() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
             <motion.div
@@ -94,20 +96,20 @@ export function AILawyerWidget() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 100, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#F5F1E8] rounded-t-2xl sm:rounded-2xl w-full max-w-md h-[600px] flex flex-col shadow-2xl"
+              className="bg-[#0A0A0A] border border-white/10 rounded-none w-full max-w-md h-[600px] flex flex-col shadow-2xl"
             >
               {/* Заголовок */}
-              <div className="flex items-center justify-between p-4 border-b border-[#E8D5C4]">
+              <div className="flex items-center justify-between p-4 border-b border-[#E31937]/20">
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-[#D4A574] flex items-center justify-center">
-                    <MessageCircle className="h-5 w-5 text-[#2C1810]" />
+                  <div className="w-10 h-10 border border-[#E31937]/30 bg-[#E31937]/10 flex items-center justify-center">
+                    <MessageCircle className="h-5 w-5 text-[#E31937]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2C1810]">AI-юрист Ольга</h3>
-                    <p className="text-xs text-[#5A4A38]">Задай вопрос 24/7</p>
+                    <h3 className="font-semibold text-white">AI-юрист Ольга</h3>
+                    <p className="text-xs text-[#8E8E8E]">Задай вопрос 24/7</p>
                   </div>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="text-[#5A4A38] hover:text-[#2C1810]">
+                <button onClick={() => setIsOpen(false)} className="text-[#8E8E8E] hover:text-white">
                   <X className="h-5 w-5" />
                 </button>
               </div>
@@ -120,10 +122,10 @@ export function AILawyerWidget() {
                     className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`max-w-[80%] rounded-lg p-3 ${
+                      className={`max-w-[80%] rounded-none p-3 ${
                         msg.role === 'user'
-                          ? 'bg-[#D4A574] text-[#2C1810]'
-                          : 'bg-[#E8D5C4] text-[#2C1810]'
+                          ? 'bg-[#E31937] text-white'
+                          : 'bg-white/5 border border-white/10 text-[#E5E5E5]'
                       }`}
                     >
                       {msg.content}
@@ -132,11 +134,11 @@ export function AILawyerWidget() {
                 ))}
                 {isLoading && (
                   <div className="flex justify-start">
-                    <div className="bg-[#E8D5C4] rounded-lg p-3">
+                    <div className="bg-white/5 border border-white/10 rounded-none p-3">
                       <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-[#5A4A38] rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                        <div className="w-2 h-2 bg-[#5A4A38] rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                        <div className="w-2 h-2 bg-[#5A4A38] rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                        <div className="w-2 h-2 bg-[#E31937] animate-bounce" style={{ animationDelay: '0ms' }} />
+                        <div className="w-2 h-2 bg-[#E31937] animate-bounce" style={{ animationDelay: '150ms' }} />
+                        <div className="w-2 h-2 bg-[#E31937] animate-bounce" style={{ animationDelay: '300ms' }} />
                       </div>
                     </div>
                   </div>
@@ -144,18 +146,18 @@ export function AILawyerWidget() {
               </div>
 
               {/* Ввод */}
-              <div className="p-4 border-t border-[#E8D5C4] flex gap-2">
+              <div className="p-4 border-t border-[#E31937]/20 flex gap-2">
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                   placeholder="Задайте вопрос..."
-                  className="flex-1 bg-white border-[#E8D5C4]"
+                  className="flex-1 bg-white/5 border-white/10 text-white placeholder:text-[#8E8E8E] rounded-none"
                 />
                 <Button
                   onClick={handleSend}
                   disabled={isLoading || !input.trim()}
-                  className="bg-[#D4A574] hover:bg-[#C17B5A] text-[#2C1810]"
+                  className="bg-[#E31937] hover:bg-[#C0172F] text-white rounded-none"
                 >
                   <Send className="h-4 w-4" />
                 </Button>

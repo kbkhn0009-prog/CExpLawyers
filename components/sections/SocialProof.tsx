@@ -5,7 +5,7 @@ import { Award } from "lucide-react"
 
 export function SocialProof() {
   return (
-    <section className="py-12 bg-[#E8D5C4]/30">
+    <section className="py-12 bg-[#0A0A0A] border-y border-[#393C41]/20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,13 +13,13 @@ export function SocialProof() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-4">
-            <Award className="h-5 w-5 text-[#D4A574]" />
-            <span className="text-sm font-semibold text-[#2C1810]">
+          <div className="inline-flex items-center gap-2 px-4 py-2 glass border border-white/10 mb-4">
+            <Award className="h-5 w-5 text-[#E31937]" />
+            <span className="text-sm font-semibold text-white">
               Члены Адвокатской палаты Москвы
             </span>
           </div>
-          <p className="text-sm text-[#5A4A38]">
+          <p className="text-sm text-[#8E8E8E]">
             Наши юристы имеют все необходимые сертификаты и состоят в профессиональных объединениях
           </p>
         </motion.div>
